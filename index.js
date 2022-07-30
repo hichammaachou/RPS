@@ -10,16 +10,22 @@ function getComputerChoice(){
     }
     return computerChoice
 }
-function getPlayerChoice() {
-    var playerChoice = prompt("Bla")
-    var firstChar= playerChoice.slice(0,1)
-    firstChar = firstChar.toUpperCase()
-    var restChar = playerChoice.slice(1,playerChoice.length)
-    restChar = restChar.toLowerCase()
-    playerChoice = firstChar+restChar
-    return playerChoice
-}
-    var computerSelection = getComputerChoice()
-    var playerSelection = getPlayerChoice()
-console.log(computerSelection)
-console.log(playerSelection)
+
+    
+    var playerScore = 0
+    var computerScore = 0
+if (playerScore<5 && computerScore<5) {
+    for (let i = 0; i < document.querySelectorAll("button").length; i++) {
+        document.querySelectorAll("button")[i].addEventListener("click", function(){
+        var computerSelection = getComputerChoice()
+        var playerSelection = this.textContent
+    if (computerSelection===playerSelection) {
+        document.querySelector(".title").textContent = "Draw!"
+    } else if() {
+        document.querySelector(".title").textContent = "traw!"
+    }    
+        }
+        )}
+    
+    
+ }
